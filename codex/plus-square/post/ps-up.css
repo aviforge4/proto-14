@@ -1,0 +1,50 @@
+/* post-upload-form.css */
+
+.post-upload-form {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.post-upload-form .form-group {
+    margin-bottom: 15px;
+}
+
+.post-upload-form .custom-file-input {
+    cursor: pointer;
+}
+
+.post-upload-form .swiper-container {
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.post-upload-form .swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.post-upload-form .swiper-pagination {
+    margin-top: 10px;
+}
+
+.post-upload-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.post-upload-form .preview-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}

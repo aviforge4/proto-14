@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star turn</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-<YOUR_INTEGRITY_HASH>" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-R6/u7mBslAqkSJaFZ4F+zGDiqSvOR6Rr8jBdE1SdC+s/92wKi49F+2e7VUG/jj7c2F6b3HodOz++J1dz0+2Vzw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Custom CSS -->
+    <link href="./codex/main-styles/styles.css" rel="stylesheet">
+    <!-- Additional CSS for enhanced UI -->
+    <link href="./codex/main-styles/enhanced-styles.css" rel="stylesheet">
+
+    <link href="./codex/sidebar/sidebar.css" rel="stylesheet">
+
+    <link href="./codex/main-feed/feeds.css" rel="stylesheet">
+    <link href="./codex/navi-bar/navi.css" rel="stylesheet">
+    <link href="./codex/navi-bar/name.css" rel="stylesheet">
+
+    <link href="./codex/plus-square/video/video.css" rel="stylesheet">
+    <link href="./codex/plus-square/short/short.css" rel="stylesheet">
+    <link href="./codex/plus-square/post/post.css" rel="stylesheet">
+
+    <link href="./codex/plus-square/video/upload.css" rel="stylesheet">
+    <link href="./codex/plus-square/short/sho-up.css" rel="stylesheet">
+    <link href="./codex/plus-square/post/ps-up.css" rel="stylesheet">
+
+  
+</head>
+<body>
+    <!-- Main Content Area -->
+    <div class="main-container" id="mainContent">
+        <!-- Top Navigation Bar -->
+        <!-- Top Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+            <div class="container d-flex justify-content-between align-items-center flex-column">
+                <!-- Center: Search Bar -->
+                <form class="form-inline my-2 my-lg-0 d-flex w-100 justify-content-center">
+                    <i class=""></i>
+                    <input class="form-control search-bar" type="search" placeholder="Search" aria-label="Search">
+                </form>
+                <!-- Container for Sidebar Menu Icon, Logo, Plus Icon, and Profile Photo -->
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <!-- Left Side: Sidebar Menu Icon and Logo -->
+                    <div class="d-flex align-items-center logo-name-container">
+                        <button class="btn btn-outline-secondary mr-3" id="menuButton" aria-label="Menu">
+                            <i class="fas fa-bars fa-lg"></i>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="./assets/photos/Designer (2).png" alt="Logo" class="logo">
+                        </a>
+                        <span class="star-turn">
+                            <span class="letter-s">𝓢</span>
+                            <span class="letter-t">𝓽</span>
+                            <span class="letter-a">𝓪</span>
+                            <span class="letter-r">𝓻</span>
+                            <span class="letter-T">𝓣</span>
+                            <span class="letter-u">𝓾</span>
+                            <span class="letter-r2">𝓻</span>
+                            <span class="letter-n">𝓷</span>
+                        </span>
+                    </div>
+        
+                    <!-- Right Side: Plus Square Icon and Profile Photo -->
+                    <div class="d-flex align-items-center position-relative">
+                        <div class="plus-icon-wrapper" id="plusIconWrapper">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <img id="profilePhoto" src="assets/photos/2_.jpg" alt="Profile Photo" class="rounded-circle profile-photo" data-toggle="modal" data-target="#profileModal">
+        
+                        <!-- Dropdown Menu -->
+                        <div class="dropdown-menu" id="plusDropdownMenu">
+                            <a class="dropdown-item" href="#">Video</a>
+                            <a class="dropdown-item" href="#">Short</a>
+                            <a class="dropdown-item" href="#">Post</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+                
+        <!-- Navigation Tabs -->
+         <!-- Navigation Tabs -->
+        <ul class="nav nav-tabs justify-content-center w-100" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                    <i class="fas fa-home fa-lg"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="shorts-tab" data-toggle="tab" href="#shorts" role="tab" aria-controls="shorts" aria-selected="false">
+                    <i class="fas fa-clapperboard fa-lg"></i>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" id="following-tab" data-toggle="tab" href="#following" role="tab" aria-controls="following" aria-selected="false">
+                    <i class="fas fa-user-friends fa-lg"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="false">
+                    <i class="fas fa-images fa-lg"></i>
+                </a>
+            </li>
+        </ul>
+
+        
+        <!-- main feeds (tabs) Content -->
+        <!--div class="tab-content w-100" id="myTabContent" -->
+            <!-- Home feed (Tab) -->
+
+
+            <!-- shorts feed (tab) -->
+            
+
+            <!-- Following Tab -->
+            
+
+            <!-- Posts-->
+
+            
+    <!-- Sidebar -->
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <span class="close-icon" id="closeSidebar">&times;</span>
+        <div class="list-group">
+            <a href="#" class="list-group-item" data-option="gaming">
+                <i class="fa-solid fa-gamepad fa-lg" style="color: #029772;"></i> Gaming
+            </a>
+            
+            <div class="list-group-item" data-option="settings">
+                General
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <div class="sub-options" id="settingsSubOptions">
+                <a href="#" class="list-group-item" data-option="notification">
+                    <i class="fa-solid fa-bell fa-lg" style="color: #FFD43B;"></i> Notification
+                </a>
+                <a href="#" class="list-group-item" data-option="dark-mode">
+                    <i class="fa-solid fa-moon fa-lg" style="color: #000000;"></i> Dark Mode
+                </a>
+                <a href="#" class="list-group-item" data-option="data-saver">
+                    <i class="fa-solid fa-gear" style="color: rgb(88, 88, 88);"></i> Settings
+                </a>
+            </div>
+            
+            <a href="#" class="list-group-item" data-option="activity">
+                Activity
+                <i class="fas fa-angle-down"></i>
+            </a>
+            <div class="sub-options" id="activitySubOptions">
+                <a href="#" class="list-group-item" data-option="heart">
+                    <i class="fa-solid fa-heart fa-beat-fade fa-lg" style="color: #ff0000;"></i> Heart
+                </a>
+                <a href="#" class="list-group-item" data-option="heart-broke">
+                    <i class="fas fa-heart-broken fa-lg" style="color: #000000;"></i> Heart Broke
+                </a>
+                <a href="#" class="list-group-item" data-option="save">
+                    <i class="fa-solid fa-bookmark fa-lg" style="color: #6946b9;"></i> Save
+                </a>
+                <a href="#" class="list-group-item" data-option="comment">
+                    <i class="fa-solid fa-comment fa-lg" style="color: #74C0FC;"></i> Comment
+                </a>
+            </div>
+            
+            <a href="#" class="list-group-item" data-option="history">
+                History
+                <i class="fas fa-angle-down"></i>
+            </a>
+            <div class="sub-options" id="historySubOptions">
+                <a href="#" class="list-group-item" data-option="watch-history">
+                    <i class="fa-solid fa-clock-rotate-left fa-lg" style="color: #4CAF50;"></i> Watch History
+                </a>
+                <a href="#" class="list-group-item" data-option="search-history">
+                    <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #FFC107;"></i> Search History
+                </a>
+            </div>
+            
+            <a href="#" class="list-group-item" data-option="help">
+                Help
+                <i class="fas fa-angle-down"></i>
+            </a>
+            <div class="sub-options" id="helpSubOptions">
+                <a href="#" class="list-group-item" data-option="report-problem">
+                    <i class="fa-solid fa-exclamation-circle fa-lg" style="color: #F44336;"></i> Report Problem
+                </a>
+                <a href="#" class="list-group-item" data-option="feedback">
+                    <i class="fa-solid fa-comments fa-lg" style="color: #FF9800;"></i> Feedback
+                </a>
+                <a href="#" class="list-group-item" data-option="user-guide">
+                    <i class="fa-solid fa-book fa-lg" style="color: #9C27B0;"></i> User Guide
+                </a>
+                <a href="#" class="list-group-item" data-option="about">
+                    <i class="fa-solid fa-info-circle fa-lg" style="color: #00BCD4;"></i> About
+                </a>
+            </div>
+            
+            <a href="#" class="list-group-item" data-option="terms">
+                <i class="fa-solid fa-file-contract fa-lg" style="color: #607D8B;"></i> Terms of Services
+            </a>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <!-- Video Section -->
+    <div class="video-section" id="videoSection" style="display: none;">
+        <i class="fa-solid fa-arrow-left" id="closeVideoSection" style="color: #000000;"></i>
+        <div class="video-header">
+            <span class="videos-text">Videos</span>
+            <div class="video-buttons">
+                <button class="video-button" id="addVideoButton">Add</button>
+                <button class="video-button" id="monetizationButton">Monetization</button>
+            </div>
+        </div>
+        <div class="line"></div> <!-- New line added -->
+
+        <!-- Video Upload Form -->
+        <!-- Example HTML Structure -->
+        <div class="video-upload-form" id="videoUploadForm" style="display: none; overflow-y: auto; max-height: 80vh;">
+            <i class="fa-solid fa-arrow-left" id="closeVideoUploadForm" style="color: #000000;"></i>
+            <div class="form-group">
+                <input type="file" id="videoFile" accept="video/*" style="display: none;">
+                <button class="filter-button" onclick="document.getElementById('videoFile').click();">Choose Video</button>
+                <div id="videoDisplaySection" style="display: none;">
+                    <video id="uploadedVideo" controls style="max-width: 100%;"></video>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="file" id="thumbnailFile" accept="image/*" style="display: none;">
+                <button class="filter-button" onclick="document.getElementById('thumbnailFile').click();">Choose Thumbnail</button>
+                <div id="thumbnailDisplaySection" style="display: none;">
+                    <img id="chosenThumbnail" src="" alt="Thumbnail" style="max-width: 100%; max-height: 300px;">
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" id="videoTitle" class="form-control" placeholder="Title">
+            </div>
+            <div class="form-group">
+                <textarea id="videoDescription" class="form-control" placeholder="Description"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="text" id="videoTags" class="form-control" placeholder="Add Tags">
+            </div>
+            <div class="form-group">
+                <input type="text" id="videoLocation" class="form-control" placeholder="Add Location">
+            </div>
+            <div class="form-group">
+                <input type="datetime-local" id="videoDateTime" class="form-control">
+            </div>
+            <button class="preview-button" id="previewVideoButton">Preview</button>
+        </div>
+
+        <!-- Preview Container -->
+        <div id="previewContainer" style="display: none; margin-top: 20px;"></div>
+    </div>
+
+    <!-- Short Section -->
+    <div class="short-section" id="shortSection" style="display: none;">
+        <i class="fa-solid fa-arrow-left" id="closeShortSection" style="color: #000000;"></i>
+        <div class="short-header">
+            <span class="shorts-text">Shorts</span>
+            <div class="short-buttons">
+                <button class="short-button" id="addShortButton">Add</button>
+                <button class="short-button" id="monetizationShortButton">Monetization</button>
+            </div>
+        </div>
+        <div class="line"></div> <!-- New line added -->
+        <!-- Add your short content here -->
+        <!-- Short Upload Form -->
+        <div class="short-upload-form" id="shortUploadForm" style="display: none;">
+            <i class="fa-solid fa-arrow-left" id="closeShortUploadForm" style="color: #000000;"></i>
+            <div class="form-group">
+                <button class="filter-button">Choose Video</button>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Title">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" placeholder="Description"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Add Tags">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Add Location">
+            </div>
+            <div class="form-group">
+                <input type="datetime-local" class="form-control">
+            </div>
+            <button class="preview-button">Preview</button>
+        </div>
+    </div>
+
+    <!-- Post Section -->
+    <div class="post-section" id="postSection" style="display: none;">
+        <i class="fa-solid fa-arrow-left" id="closePostSection" style="color: #000000;"></i>
+        <div class="post-header">
+            <span class="posts-text">Posts</span>
+            <div class="post-buttons">
+                <button class="post-button" id="addPostButton">Add</button>
+                <button class="post-button" id="monetizationPostButton">Monetization</button>
+            </div>
+        </div>
+        <div class="line"></div> <!-- New line added -->
+        <!-- Add your post content here -->
+        <!-- Post Upload Form -->
+        <div class="post-upload-form" id="postUploadForm" style="display: none;">
+            <i class="fa-solid fa-arrow-left" id="closePostUploadForm" style="color: #000000;"></i>
+            <div class="form-group">
+                <label for="postImages"></label>
+                <div class="input-group">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="postImages" accept="image/*" multiple>
+                        <label class="custom-file-label" for="postImages">Choose Photos</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Swiper Container for Selected Images -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="selectedImages"></div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="postMusic"></label>
+                <div class="input-group">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="postMusic" accept="audio/*">
+                        <label class="custom-file-label" for="postMusic">Choose Music</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <audio id="musicPlayer" controls style="width: 100%; display: none;"></audio>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Title">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" placeholder="Description"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Add Tags">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Add Location">
+            </div>
+            <div class="form-group">
+                <input type="datetime-local" class="form-control">
+            </div>
+            <button class="preview-button">Preview</button>
+        </div>
+
+
+
+    <!-- Profile Section -->
+    
+    <!-- Bootstrap JavaScript and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="./codex/sidebar/sidebar.js"></script>
+
+    <script src="./codex/plus-square/plus-squre.js"></script>
+    <script src="./codex/plus-square/video/video.js"></script>
+    <script src="./codex/plus-square/short/short.js"></script>
+    <script src="./codex/plus-square/post/post.js"></script>
+
+    <script src="./codex/plus-square/video/upload.js"></script>
+    <script src="./codex/plus-square/short/sho-up.js"></script>
+    <script src="./codex/plus-square/post/ps-up.js"></script>
+    <script src="./codex/plus-square/video/preview.js"></script>
+
+
+</body>
+</html>

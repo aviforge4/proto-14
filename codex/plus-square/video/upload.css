@@ -1,0 +1,99 @@
+/* video-upload.css */
+
+.video-upload-form {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.video-upload-form .form-group {
+    margin-bottom: 15px;
+}
+
+.video-upload-form .filter-button {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.video-upload-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.video-upload-form .form-control.description {
+    resize: none;
+    overflow-y: hidden;
+    min-height: 100px;
+    max-height: 300px; /* Limit to which the textarea can grow */
+}
+
+.video-upload-form .preview-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Style for chosen video and thumbnail */
+#videoDisplaySection, #thumbnailDisplaySection {
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+    text-align: center; /* Center align content */
+}
+
+#uploadedVideo {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#uploadedVideo:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#chosenThumbnail {
+    max-width: 100%;
+    max-height: 300px;
+    height: auto;
+    border: 2px solid #2196F3;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#chosenThumbnail:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    #uploadedVideo, #chosenThumbnail {
+        max-width: 100%;
+        max-height: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #uploadedVideo, #chosenThumbnail {
+        max-width: 100%;
+        max-height: 150px;
+    }
+}
